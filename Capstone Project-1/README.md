@@ -70,4 +70,24 @@ The process to Download is as follows:
 
   `[REF: https://www.analyticsvidhya.com/blog/2021/04/how-to-download-kaggle-datasets-using-jupyter-notebook/]`
 
+### 2.4. Exploratory Data Analysis
+
+Grape Vine Leaves Dataset consists of 2036 pictures in 6 different folder:
+
+|**Count of Training Sample** |**Class** | **/Count** |
+|---|---|---|
+|1|Cabernet Sauvignon|67|
+|2|Muller Thurgau|73|
+|3|Auxerrois|53|
+|4|Syrah|71|
+|5|Sauvignon Blanc|60|
+|6|Tempranillo|42|
+|7|Riesling|70|
+|8|Pinot Noir|35|
+|9|Chardonnay|62|
+|10|Cabernet Franc|36|
+|11|Merlot|37|
+![image](https://user-imaa-efef6283510c.png)
+
+
 
