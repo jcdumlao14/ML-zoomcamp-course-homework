@@ -69,12 +69,69 @@ The process to Download is as follows:
 7. After successful completion of the download, a folder will be created in the current working directory of your google colab notebook. This folder contains our dataset.
 
   `[REF: https://www.analyticsvidhya.com/blog/2021/04/how-to-download-kaggle-datasets-using-jupyter-notebook/]`
+  
+### 2.4. Data Preparation (Split data in Train, Test, Validation)
+(You can find codes in grapevine-notebook.ipynb)
 
-### 2.4. Exploratory Data Analysis
+For the part, I used two packages `os` and `shutil`.
 
-Grape Vine Leaves Dataset consists of 2036 pictures in 6 different folder:
+`os.mkdir` is used to create the destination directories:
 
-|**Count of Training Sample** |**Class** | **/Count** |
+**--train**
+* Cabernet Sauvignon
+* Sauvignon Blanc
+* Syrah
+* Auxerrois
+* Chardonnay
+* Merlot
+* Cabernet Franc
+* Pinot Noir
+* Riesling
+* Muller Thurgau
+* Tempranillo
+
+**--validation**
+* Cabernet Sauvignon
+* Sauvignon Blanc
+* Syrah
+* Auxerrois
+* Chardonnay
+* Merlot
+* Cabernet Franc
+* Pinot Noir
+* Riesling
+* Muller Thurgau
+* Tempranillo
+
+**--test**
+* Cabernet Sauvignon
+* Sauvignon Blanc
+* Syrah
+* Auxerrois
+* Chardonnay
+* Merlot
+* Cabernet Franc
+* Pinot Noir
+* Riesling
+* Muller Thurgau
+* Tempranillo
+
+First, rename the files due to their classe by `os.rename`.
+
+Then, `shutil.copy` is used to copy the file from source to destination folders as follow:
+
+from each grapevine-leaves folder (Cabernet Sauvignon',Muller Thurgau,Auxerrois,Syrah,Sauvignon Blanc,Tempranillo,Riesling,Pinot Noir,Chardonnay,Cabernet Franc,Merlot', ...):
+* The first 60% of images were copied to _grapevine-leaves/train_ folder
+* The next 20% of images were copied to _grapevine-leaves/validation_ folder
+* The rest were copied to _grapevine-leaves/test_ folder
+
+### 2.5. Exploratory Data Analysis
+
+Grapevine Leaves Dataset consists of 1,009 files in 11 different classes:
+Viz Random Sample from each class
+![image]()
+
+|**Count of Training Sample** |**Class** | **per Count** |
 |---|---|---|
 |1|Cabernet Sauvignon|67|
 |2|Muller Thurgau|73|
@@ -87,7 +144,64 @@ Grape Vine Leaves Dataset consists of 2036 pictures in 6 different folder:
 |9|Chardonnay|62|
 |10|Cabernet Franc|36|
 |11|Merlot|37|
-![image](https://user-imaa-efef6283510c.png)
+
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/viz/Training%20Data.png)
+
+### 2.6. Create model( train multiple model)
+
+* 1. **Neural Networks (MLP)** - Multi-layer perceptron (MLP) is a supplement of a feed-forward neural network. It consists of three types of layers—the input layer, the output layer, and the hidden.
+* 2. **Convolutional Neural Network** - CNN (Baseline Model)-The convolutional neural network starts with a separate temporal layer and spatial convolutional layers, followed by a pooling layer.
+* 3. **Improving Baseline Model** - Create Deeper Model (Adding more convolution and max pooling layers)
+* 4. **Further Improving the Baseline Model** - Reducing the overfitting of the model by using BatchNormalization and Dropout layers and Adding Global Average Pooling instead of Flatten layer.
+* 5. **VGG16 model** - VGG16 is a convolutional neural network trained on a subset of the ImageNet dataset.
+* 6. **Resnet model** -A residual neural network (ResNet) is an artificial neural network (ANN).
+![image]()
+* 7. **MobileNetv2 model** - MobileNet-v2 is a convolutional neural network that is 53 layers deep.
+```
+pretrained_mobilenet_model = tf.keras.applications.MobileNetV2(weights='imagenet', include_top=False, input_shape=[height,width, 3])
+pretrained_mobilenet_model.trainable=False
+mobilenet_model = tf.keras.Sequential([
+    pretrained_mobilenet_model,
+    tf.keras.layers.GlobalAveragePooling2D(),
+    tf.keras.layers.Dense(15, activation='softmax')
+```
+* MobileNetV2 is a general architecture and can be used for multiple use cases. Depending on the use case, it can use different input layer size and different width factors. This allows different width models to reduce the number of multiply-adds and thereby reduce inference cost on mobile devices.
+
+* MobileNetV2 is very similar to the original MobileNet, except that it uses inverted residual blocks with bottlenecking features. It has a drastically lower parameter count than the original MobileNet. MobileNets support any input size greater than 32 x 32, with larger image sizes offering better performance.
+
+    * input_shape -Optional shape tuple, to be specified if you would like to use a model with an input image resolution that is not (224, 224, 3). It should have exactly 3 inputs channels (256, 256, 3).
+    * include_top - Boolean, whether to include the fully-connected layer at the top of the network. Defaults to False.
+    * weights - String, one of None (random initialization), 'imagenet' (pre-training on ImageNet), or the path to the weights file to be loaded.
+    * pooling -
+       *avg means that global average pooling will be applied to the output of the last convolutional block, and thus the output of the model will be a 2D tensor.
+       *max means that global max pooling will be applied.
+    * classifier_activation - A str or callable. The activation function to use on the "top" layer. Ignored unless include_top=True. Set classifier_activation=None to return the logits of the "top" layer. When loading pretrained weights, classifier_activation can only be None or "softmax".
+This is the best model
+![image]()
+
+### 2.6. Checking Predictions with the best models -
+* ResNet
+    * predictions(resnet_model)
+    
+    ![image]()
+    
+* MobileNet
+    * predictions(mobilenet_model)
+    
+    ![image]()
+
+### 2.7. Data Augmentation
+
+    * Displaying some Randomly Augmented Training Images
+    
+    ![image]()
+
+
+
+
+
+
+
 
 
 
