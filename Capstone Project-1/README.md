@@ -128,8 +128,9 @@ from each grapevine-leaves folder (Cabernet Sauvignon',Muller Thurgau,Auxerrois,
 ### 2.5. Exploratory Data Analysis
 
 Grapevine Leaves Dataset consists of 1,009 files in 11 different classes:
-Viz Random Sample from each class
-![image]()
+Viz Random Sample from each class.
+
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/viz/Viz%20Random%20Sample%20from%20each%20class.png)
 
 |**Count of Training Sample** |**Class** | **per Count** |
 |---|---|---|
@@ -155,7 +156,11 @@ Viz Random Sample from each class
 * 4. **Further Improving the Baseline Model** - Reducing the overfitting of the model by using BatchNormalization and Dropout layers and Adding Global Average Pooling instead of Flatten layer.
 * 5. **VGG16 model** - VGG16 is a convolutional neural network trained on a subset of the ImageNet dataset.
 * 6. **Resnet model** -A residual neural network (ResNet) is an artificial neural network (ANN).
-![image]()
+
+**ResNet model**
+
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/RESNET/resnet_model.png)
+
 * 7. **MobileNetv2 model** - MobileNet-v2 is a convolutional neural network that is 53 layers deep.
 ```
 pretrained_mobilenet_model = tf.keras.applications.MobileNetV2(weights='imagenet', include_top=False, input_shape=[height,width, 3])
@@ -176,32 +181,26 @@ mobilenet_model = tf.keras.Sequential([
        *avg means that global average pooling will be applied to the output of the last convolutional block, and thus the output of the model will be a 2D tensor.
        *max means that global max pooling will be applied.
     * classifier_activation - A str or callable. The activation function to use on the "top" layer. Ignored unless include_top=True. Set classifier_activation=None to return the logits of the "top" layer. When loading pretrained weights, classifier_activation can only be None or "softmax".
-This is the best model
-![image]()
+    
+**This is the best model**
+
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/MobileNet/best%20model%20(mobilenet_model).png)
 
 ### 2.6. Checking Predictions with the best models -
 * ResNet
     * predictions(resnet_model)
     
-    ![image]()
+    ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/RESNET/resnet_model%20-%20prediction.png)
+    ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/RESNET/resnet_model-prediction2.png)
     
 * MobileNet
     * predictions(mobilenet_model)
     
-    ![image]()
+    ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/MobileNet/mobilenet_model-prediction.png)
+    ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/MobileNet/mobilenet_model-prediction2.png)
 
-### 2.7. Data Augmentation
+### 2.7. Data Augmentation 
+* Display some Randomly Augmented Training Images
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/viz/randomly%20augmented%20training%20images.png)
 
-    * Displaying some Randomly Augmented Training Images
     
-    ![image]()
-
-
-
-
-
-
-
-
-
-
