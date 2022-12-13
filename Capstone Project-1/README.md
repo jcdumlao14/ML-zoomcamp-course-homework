@@ -32,7 +32,6 @@ List of varieties:
 This Model was built using [kaggle Dataset](https://www.kaggle.com/datasets/maximvlah/grapevine-leaves).
 
 ### 2.3. Downloding the Dataset from kaggle
-(You can find codes in DataPreparation.ipynb)
 
 Before starting, you need to have the opendatasets library installed in your system. If it’s not present in your system, use Python’s package manager pip and run:
 
@@ -148,12 +147,12 @@ Viz Random Sample from each class.
 
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/viz/Training%20Data.png)
 
-## 4. Create model( train multiple model)
+## 4. Create model
 (You can find codes in grapevine-notebook.ipynb)
-**TensorFlow** is a library for ML and AI, and **Keras** from tensorfolw provides a Python interface for TensorFlow. In **keras.layers** you can find different layers to creat your model. more info in [keras layers](https://keras.io/api/layers/)
-To classify the yoga images I used 7 model by combining layers and changing activation functions and optimizers.
 
-### 4.1. Training Different Model
+**TensorFlow** is a library for ML and AI, and **Keras** from tensorfolw provides a Python interface for TensorFlow. In **keras.layers** you can find different layers to creat your model. more info in [keras layers](https://keras.io/api/layers/) To classify the grapevine leaves images.
+
+### 4.1. Training Different Models
 
 * 1. **Neural Networks (MLP)** - Multi-layer perceptron (MLP) is a supplement of a feed-forward neural network. It consists of three types of layers—the input layer, the output layer, and the hidden.
 * 2. **Convolutional Neural Network** - CNN (Baseline Model)-The convolutional neural network starts with a separate temporal layer and spatial convolutional layers, followed by a pooling layer.
@@ -216,7 +215,7 @@ Train the model and save the models using checkpoint. Now, we have to choose the
 Predict the output of the model. It is saves using flask.
 In terminal you can use this command to run it.
 ```
-gunicorn --bind 0.0.0.0:8080 predict:app
+gunicorn --bind 0.0.0.0:8888 predict:app
 ```
 #### 6.4. Predict_test and test the model by gunicorn
 The test file is the same as notebook test. After runnig predict, you can use following command in new terminal:
@@ -240,24 +239,27 @@ Lambda function perform like predict file but it is used for serverless AWS depl
 #### 6.7. Create Docker file
 For creating Docker file the requirements are:
 ```
-using python from public.ecr.aws/lambda/python:3.8
-installing keras-image-helper
-installing tflite_runtime from https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp38-cp38-linux_x86_64.whl(a special version accepted by aws)
-model: .tflite .
-lambda_function.py .
+FROM public.ecr.aws/lambda/python:3.9
 
-command: lambda_function.lambda_handler
+RUN pip install keras-image-helper
+RUN pip install https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp38-cp38-linux_x86_64.whl
+
+COPY final_model.h5 .
+COPY lambda_function.py .
+
+CMD ["lambda_function.lambda_handler"]
 ```
+
 #### 6.8. Containerization
 follow the commands:
 ```
-docker build -t grapevine-model .
+docker build -t final_model.h5 .
 ```
 ### 6.9. Deployement
 #### 6..9.1. Deploy and test the model locally
 Run the docker image
 ```
-docker run -it --rm -p 8888:8888 grapevine-model:latest
+docker run -it --rm -p 8888:8888 final_model.h5:latest
 ```
 
     
