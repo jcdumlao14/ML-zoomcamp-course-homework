@@ -125,7 +125,7 @@ from each grapevine-leaves folder (Cabernet Sauvignon',Muller Thurgau,Auxerrois,
 * The next 20% of images were copied to _grapevine-leaves/validation_ folder
 * The rest were copied to _grapevine-leaves/test_ folder
 
-### 2.5. Exploratory Data Analysis
+### 3. Exploratory Data Analysis
 
 Grapevine Leaves Dataset consists of 1,009 files in 11 different classes:
 Viz Random Sample from each class.
@@ -148,7 +148,12 @@ Viz Random Sample from each class.
 
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/viz/Training%20Data.png)
 
-### 2.6. Create model( train multiple model)
+## 4. Create model( train multiple model)
+(You can find codes in grapevine-notebook.ipynb)
+**TensorFlow** is a library for ML and AI, and **Keras** from tensorfolw provides a Python interface for TensorFlow. In **keras.layers** you can find different layers to creat your model. more info in [keras layers](https://keras.io/api/layers/)
+To classify the yoga images I used 7 model by combining layers and changing activation functions and optimizers.
+
+### 4.1. Training Different Model
 
 * 1. **Neural Networks (MLP)** - Multi-layer perceptron (MLP) is a supplement of a feed-forward neural network. It consists of three types of layers—the input layer, the output layer, and the hidden.
 * 2. **Convolutional Neural Network** - CNN (Baseline Model)-The convolutional neural network starts with a separate temporal layer and spatial convolutional layers, followed by a pooling layer.
@@ -186,7 +191,7 @@ mobilenet_model = tf.keras.Sequential([
 
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/MobileNet/best%20model%20(mobilenet_model).png)
 
-### 2.6. Checking Predictions with the best models -
+### 5.1. Checking Predictions with the best models -
 * ResNet
     * predictions(resnet_model)
     
@@ -199,8 +204,60 @@ mobilenet_model = tf.keras.Sequential([
     ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/MobileNet/mobilenet_model-prediction.png)
     ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/MobileNet/mobilenet_model-prediction2.png)
 
-### 2.7. Data Augmentation 
+### 5.1. Data Augmentation 
 * Display some Randomly Augmented Training Images
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-1/viz/randomly%20augmented%20training%20images.png)
+
+### 6.1. Preparing Script
+To use the model I prepared different script. Before using script you have to download the dataset from data folder, save it in a capstone project folder in your computer and unzip it.
+#### 6.2 Train
+Train the model and save the models using checkpoint. Now, we have to choose the best model manually.
+#### 6.3. Predict
+Predict the output of the model. It is saves using flask.
+In terminal you can use this command to run it.
+```
+gunicorn --bind 0.0.0.0:8080 predict:app
+```
+#### 6.4. Predict_test and test the model by gunicorn
+The test file is the same as notebook test. After runnig predict, you can use following command in new terminal:
+```
+python predict_test.py
+```
+
+#### 6.5. Create pipfile and pipfile.lock
+Create pipfiles to have all required file for create model, because for predicting we remove tensorflow dependencies of the model. Tensorflsion ow package is a large package. We use the lighter version called _tflite_. But I prepared pipfile and pipfile.lock with numpy, tensorflow, flask and gunicorn packages.
+To create pipfiles, first we need to install `pipenv`. The command is:
+```
+pip install pipenv
+```
+then we install packages as follows:
+```
+pipenv install numpy tensorflow flask gunicorn
+```
+#### 6.6. Create Lambda Function
+Lambda function perform like predict file but it is used for serverless AWS deployement, however we can test it locally.
+
+#### 6.7. Create Docker file
+For creating Docker file the requirements are:
+```
+using python from public.ecr.aws/lambda/python:3.8
+installing keras-image-helper
+installing tflite_runtime from https://github.com/alexeygrigorev/tflite-aws-lambda/raw/main/tflite/tflite_runtime-2.7.0-cp38-cp38-linux_x86_64.whl(a special version accepted by aws)
+model: .tflite .
+lambda_function.py .
+
+command: lambda_function.lambda_handler
+```
+#### 6.8. Containerization
+follow the commands:
+```
+docker build -t grapevine-model .
+```
+### 6.9. Deployement
+#### 6..9.1. Deploy and test the model locally
+Run the docker image
+```
+docker run -it --rm -p 8888:8888 grapevine-model:latest
+```
 
     
