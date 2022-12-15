@@ -2,7 +2,7 @@
 
 This project was performed as part of the _ML Zoomcamp Course_, Capstone Project. This course is conducted by [Alexey Grigorev](https://bit.ly/3BxeAoB)
 
-## [Capston Project 1](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/tree/main/Capstone%20Project-1)
+## Capston Project 1
 
 # [Grapevine Leaves Classification By Neural Networks and Deep Learning](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/tree/main/Capstone%20Project-1)
 
