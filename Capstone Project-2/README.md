@@ -46,11 +46,11 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 ## **Age Distribution**
 * Normal Patients
 
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/NormalP.png)
+![image]()
 
 * Heart Disease Patients
 
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/HeartDiseaseP.png)
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/Heart%20DiseaseP.png)
 
 # **4. Create Model**
 
