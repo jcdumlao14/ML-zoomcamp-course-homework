@@ -5,19 +5,7 @@ This project was performed as part of the _ML Zoomcamp Course_, Capstone Project
 
 ![image](https://user-images.githubusercontent.com/82657966/213832332-73d03238-9c40-4791-9411-281cfd963c4f.png)
 
-
-
-# **Context**
-
-**[Heart Disease Dataset (Most comprehensive)](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)**
-
-# **Content**
-
-**Heart disease** is also known as Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year which is about 32% of all deaths globally. CVDs are a group of disorders of the heart and blood vessels and include coronary heart disease, cerebrovascular disease, rheumatic heart disease, and other conditions. Four out of 5CVD deaths are due to heart attacks and strokes, and one-third of these deaths occur prematurely in people under 70 years of age.
-
-We have curated this dataset by combining different datasets already available independently but not combined before. We have combined them over 11 common features which makes it the largest heart disease dataset available for research purposes. The five datasets used for its curation are:
-
-# **1. Dataset description**
+# **1. Task Description**
 
 This dataset consists of **11 features** and **a target variable**. It has **6 nominal variables** and **5 numeric variables**. The detailed description of all the features are as follows:
 
@@ -37,6 +25,40 @@ Target variable
 
 12. **target:** It is the target variable which we have to predict **1 means patient is suffering from heart risk** and **0 means patient is normal.(nom)**
 
+# **2. Data**
+
+**[Heart Disease Dataset (Most comprehensive)](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)**
+
+# **2.1. About the Data**
+
+**Heart disease** is also known as Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year which is about 32% of all deaths globally. CVDs are a group of disorders of the heart and blood vessels and include coronary heart disease, cerebrovascular disease, rheumatic heart disease, and other conditions. Four out of 5CVD deaths are due to heart attacks and strokes, and one-third of these deaths occur prematurely in people under 70 years of age.
+
+We have curated this dataset by combining different datasets already available independently but not combined before. We have combined them over 11 common features which makes it the largest heart disease dataset available for research purposes. The five datasets used for its curation are:
+
+# **2.2. Data References**
+This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)
+
+# **3. Exploratory Data Analysis**
+(You can find codes in heartDisease.ipynb)
+
+![image]()
+
+![image]()
+
+## **Age Distribution**
+* Normal Patients
+![image]()
+* Heart Disease Patients
+![image]()
+
+# **4. Create Model**
+
+# **4.1 Training Different Models**
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* Gradient Boosting
+![image]()
 
 
 
