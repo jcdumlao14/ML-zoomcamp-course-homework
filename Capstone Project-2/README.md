@@ -5,7 +5,11 @@ This project was performed as part of the _ML Zoomcamp Course_, Capstone Project
 
 ![image](https://user-images.githubusercontent.com/82657966/213832332-73d03238-9c40-4791-9411-281cfd963c4f.png)
 
-## Dataset Reference:
+# **Data**
+
+**[Heart Disease Dataset (Most comprehensive)](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)**
+
+# Dataset Reference:
 This Model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final).
 
 # **About the Data**
@@ -14,7 +18,7 @@ This Model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 
 We have curated this dataset by combining different datasets already available independently but not combined before. We have combined them over 11 common features which makes it the largest heart disease dataset available for research purposes. The five datasets used for its curation are:
 
-## Data Description
+# Data Description
 This dataset consists of **11 features** and **a target variable**. It has **6 nominal variables** and **5 numeric variables**. The detailed description of all the features are as follows:
 
 | **Features** | **Definitions** |
@@ -34,9 +38,9 @@ This dataset consists of **11 features** and **a target variable**. It has **6 n
 | target| It is the target variable which we have to predict **1 means patient is suffering from heart risk** and **0 means patient is normal.(nom)**|
 
 
-## Features Characteristics
+# Features Characteristics
 
-**1. Features Type**
+# **1. Features Type**
 |**Categorical**|**Numerical**|
 |---|---|
 |sex|age|
@@ -47,22 +51,7 @@ This dataset consists of **11 features** and **a target variable**. It has **6 n
 | |exercise_angina|
 | |oldpeak|
 
-**2.Correlated Features**
-
-**_AGE_** had the highest correaltion with **_I_**
-
-**3.High-Risk Features**
-
-**_CHILDREN_, _SMOKER_, _REGION_** had the highest risks, respectively.
-
-**4.Mutual Information**
-
-**_CHILDREN_** had the highest mutual information.
-
-## Evaluation Metrics
-**_AUC_ROC_Curve_ and _RMSE_** were used as evaluation Metrics.
-
-# **3. Exploratory Data Analysis**
+# **2. Exploratory Data Analysis**
 (You can find codes in heartDisease.ipynb)
 
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/GenderDistribution.png)
@@ -80,6 +69,21 @@ This dataset consists of **11 features** and **a target variable**. It has **6 n
 
 * The mean age for heart disease patients is around 58 to 60 years.
 
+# **3. Correlated Features**
+
+**_AGE_** had the highest correaltion with **_target_**
+
+# **4. High-Risk Features**
+
+**_cholesterol_, _resting_bp_s_, _fasting_blood_sugar_** had the highest risks, respectively.
+
+# **5.Mutual Information**
+
+**_st_slope_** had the highest mutual information.
+
+# **6. Evaluation Metrics**
+**_AUC_ROC_Curve_** were used as evaluation Metrics.
+
 ## Classification Models Used
 We will use the following classification models to test our theory of whether to predict 1 means patient is suffering from heart risk and 0 means patient is normal, given the above fields: 
 
@@ -88,7 +92,7 @@ We will use the following classification models to test our theory of whether to
 * [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 * [XGBoost](https://xgboost.readthedocs.io/en/latest/python/index.html)
 
-## Prediction Model
+# **7. Prediction Model**
 By evaluating different models, _Random_Forest_ achieved the best result.
 
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/best%20model.png)
@@ -105,6 +109,7 @@ Folder Midterm Project includes following files:
 |heartDisease.ipynb|Data preparation and cleaning & Exploratory Data Analysis|
 | |Feature important Analysis & Model selection|
 |train.py|Training the final model|
+|train.ipynb|Train the final model-python|
 | model_rf_t=04.bin|Saved model by pickle|
 |predict_test.py|Loading the model & Serving it via a web service (with Flask)|
 |predict_test.py|Testing the model|
@@ -113,7 +118,7 @@ Folder Midterm Project includes following files:
 
 [RAW DATA(heart_statlog_cleveland_hungary_final.csv) -](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/heart_statlog_cleveland_hungary_final.csv)
 
-[heartDisease.ipynb]()
+[heartDisease.ipynb](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/heartDisease.ipynb)
 
 
 # RUNNING INSTRUCTION
@@ -125,7 +130,7 @@ Folder Midterm Project includes following files:
    ```
 4. Install essential packages
    ```
-   pipenv install numpy pandas scikit-learn==1.0 flask xgboost
+   pipenv install numpy pandas scikit-learn==1.0 flask rf
    ```
 5. Install Docker
  - SingUp for a DockerID in [Docker](https://hub.docker.com/)
@@ -147,14 +152,3 @@ Folder Midterm Project includes following files:
    ```
    Is there a patient who is suffering from heart risk
    ```
-
-# **2. Data**
-
-**[Heart Disease Dataset (Most comprehensive)](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)**
-
-
-
-# **2.2. Data References**
-This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)
-
-
