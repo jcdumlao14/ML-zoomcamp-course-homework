@@ -101,11 +101,11 @@ Folder Midterm Project includes following files:
 
 |**File Name**|**Description**|
 |---|---|
-|.csv|Dataset|
+|heart_statlog_cleveland_hungary_final.csv|Dataset|
 |heartDisease.ipynb|Data preparation and cleaning & Exploratory Data Analysis|
 | |Feature important Analysis & Model selection|
 |train.py|Training the final model|
-| |Saved model by pickle|
+| model_rf_t=04.bin|Saved model by pickle|
 |predict_test.py|Loading the model & Serving it via a web service (with Flask)|
 |predict_test.py|Testing the model|
 |Pipfile & Pipfile.lock|Python virtual environment, Pipenv file|
