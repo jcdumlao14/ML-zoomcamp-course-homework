@@ -43,6 +43,8 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/GenderDistribution.png)
 
+* These plot indicates that more male patients(350- normal 559- have heart Disease for male) accounts for heart disease in comparison to female(211-normal, 70-heart disease female) 
+
 ## **Age Distribution**
 * Normal Patients
 
@@ -52,6 +54,8 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/Heart%20DiseaseP.png)
 
+* The mean age for heart disease patients is around 58 to 60 years.
+
 # **4. Create Model**
 
 # **4.1 Training Different Models**
@@ -60,8 +64,10 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 * Random Forest
 * Gradient Boosting
 
+This is the best model: **Random Forest**
+
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/best%20model.png)
 
-![image]()
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/Val.png)
 
 
