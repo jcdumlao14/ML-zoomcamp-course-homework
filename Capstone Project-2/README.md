@@ -46,7 +46,7 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 ## **Age Distribution**
 * Normal Patients
 
-![image]()
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/Normal%20P.png)
 
 * Heart Disease Patients
 
@@ -60,8 +60,8 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 * Random Forest
 * Gradient Boosting
 
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/bestmodel.png)
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/best%20model.png)
 
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/val.png)
+![image]()
 
 
