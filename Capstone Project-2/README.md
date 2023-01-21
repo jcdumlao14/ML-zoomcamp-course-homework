@@ -101,7 +101,7 @@ By evaluating different models, _Random_Forest_ achieved the best result.
 
 
 ## FILE DESCRIPTION
-Folder Midterm Project includes following files:
+Folder Capstone Project-2 includes following files:
 
 |**File Name**|**Description**|
 |---|---|
@@ -116,7 +116,7 @@ Folder Midterm Project includes following files:
 |Pipfile & Pipfile.lock|Python virtual environment, Pipenv file|
 |Dockerfile|Environment management, Docker, for running file|
 
-[RAW DATA(heart_statlog_cleveland_hungary_final.csv) -](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/heart_statlog_cleveland_hungary_final.csv)
+[RAW DATA(heart_statlog_cleveland_hungary_final.csv)](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/heart_statlog_cleveland_hungary_final.csv)
 
 [heartDisease.ipynb](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/heartDisease.ipynb)
 
