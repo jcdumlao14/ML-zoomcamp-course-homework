@@ -7,7 +7,7 @@ This project was performed as part of the _ML Zoomcamp Course_, Capstone Project
 
 # **Data**
 
-**[Heart Disease Dataset (Most comprehensive)](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)**
+**[Heart Disease Dataset (Comprehensive)](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final)**
 
 # Dataset Reference:
 This Model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid321axn/heart-statlog-cleveland-hungary-final).
