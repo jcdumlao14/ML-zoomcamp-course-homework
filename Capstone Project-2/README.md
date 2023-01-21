@@ -41,15 +41,16 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 # **3. Exploratory Data Analysis**
 (You can find codes in heartDisease.ipynb)
 
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/.png)
-
 ![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/GenderDistribution.png)
 
 ## **Age Distribution**
 * Normal Patients
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/GenderDistribution.png)
+
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/NormalP.png)
+
 * Heart Disease Patients
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/GenderDistribution.png)
+
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/HeartDiseaseP.png)
 
 # **4. Create Model**
 
@@ -58,7 +59,9 @@ This model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 * Decision Tree
 * Random Forest
 * Gradient Boosting
-![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/GenderDistribution.png)
 
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/bestmodel.png)
+
+![image](https://github.com/jcdumlao14/ML-zoomcamp-course-homework/blob/main/Capstone%20Project-2/image/val.png)
 
 
