@@ -1,3 +1,7 @@
+# PROJECT DESCRIPTION
+This project was performed as part of the _ML Zoomcamp Course_, Capstone Project-2. This course is conducted by [Alexey Grigorev](https://bit.ly/3BxeAoB)
+
+# Heart Disease Classification Analysis
 
 ![image](https://user-images.githubusercontent.com/82657966/213832332-73d03238-9c40-4791-9411-281cfd963c4f.png)
 
