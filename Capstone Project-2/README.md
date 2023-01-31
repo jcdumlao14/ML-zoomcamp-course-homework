@@ -14,7 +14,7 @@ This Model was built using [kaggle Dataset](https://www.kaggle.com/datasets/sid3
 
 # **About the Data**
 
-**Heart disease** is also known as Cardiovascular diseases (CVDs) are the number 1 cause of death globally, taking an estimated 17.9 million lives each year which is about 32% of all deaths globally. CVDs are a group of disorders of the heart and blood vessels and include coronary heart disease, cerebrovascular disease, rheumatic heart disease, and other conditions. Four out of 5CVD deaths are due to heart attacks and strokes, and one-third of these deaths occur prematurely in people under 70 years of age.
+**Heart disease** also known as Cardiovascular disease (CVDs) is the number 1 cause of death globally, taking an estimated 17.9 million lives each year which is about 32% of all deaths globally. CVDs are a group of disorders of the heart and blood vessels and include coronary heart disease, cerebrovascular disease, rheumatic heart disease, and other conditions. Four out of 5CVD deaths are due to heart attacks and strokes, and one-third of these deaths occur prematurely in people under 70 years of age.
 
 We have curated this dataset by combining different datasets already available independently but not combined before. We have combined them over 11 common features which makes it the largest heart disease dataset available for research purposes. The five datasets used for its curation are:
 
