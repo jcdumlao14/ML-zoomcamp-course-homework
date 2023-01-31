@@ -6,7 +6,7 @@ This project was performed as part of the _ML Zoomcamp Course_, Capstone Project
 
 
 ## 1. Task Description
-The Grapevine Leaves are provided a Leaf photos of 11 Vitis Vinifera varieties. I chose this dataset to apply Neural Networks and Deep Learning, check the different models and activation functions and,tune the model parameters and augmentation.  
+The Grapevine Leaves are provided a Leaf photos of 11 Vitis Vinifera varieties. I chose this dataset to apply Neural Networks and Deep Learning, check the different models and activation functions and tune the model parameters and augmentation.  
 
 ## 2. Data
 
